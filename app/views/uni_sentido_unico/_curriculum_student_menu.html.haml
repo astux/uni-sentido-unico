@@ -1,0 +1,3 @@
+- if @curriculum_student.curriculum.course.course_contract_id
+  - @course_contract = CourseContract.find @curriculum_student.curriculum.course.course_contract_id
+  %li= link_to (t 'CourseContract'), preview_admin_course_contract_path(@course_contract) + "?curriculum_student_id=#{@curriculum_student.id}", :class => 'show', :target => '_blank'

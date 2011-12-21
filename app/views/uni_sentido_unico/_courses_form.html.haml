@@ -1,4 +1,9 @@
 .clearfix
+  = f.label :course_contract_id
+  .input
+    = f.select :course_contract_id, CourseContract.all.collect {|p| [ p.name, p.id ] }, :include_blank => true
+
+.clearfix
   = f.label :partner_institution_id
   .input
     = f.select :partner_institution_id, PartnerInstitution.all.collect {|p| [ p.name, p.id ] }, :include_blank => true

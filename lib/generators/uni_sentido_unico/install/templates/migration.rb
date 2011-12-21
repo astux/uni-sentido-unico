@@ -15,5 +15,12 @@ class UniSentidoUnicoInstall < ActiveRecord::Migration
      end
      
      add_column :courses, :partner_institution_id, :integer
+     
+     create_table :course_contracts do |t|
+       t.string :name
+       t.string :slug
+     end
+     
+     add_column :courses, :course_contract_id, :integer
   end
 end

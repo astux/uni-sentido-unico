@@ -7,5 +7,9 @@ module UniSentidoUnico
     def courseFormPartialUrl
       return 'uni_sentido_unico/courses_form'
     end
+    
+    def curriculumStudentMenuPartialUrls
+      return 'uni_sentido_unico/curriculum_student_menu'
+    end
   end
 end

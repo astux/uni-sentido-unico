@@ -1,0 +1,190 @@
+%table.fullsize
+  %tr
+    %td.center
+      = image_tag 'faerpi.png', :width => 150
+      %h1 FACULDADE ENTRE RIOS DO PIAUI
+  %tr
+    %td.center
+      %h4
+        CONTRATO DE PRESTAÇÃO DE SERVIÇOS DO CURSO
+        = @course.name.upcase
+
+%h4 CONTRATANTE:
+%table.bordered.fullsize.bold
+  %tr
+    %td NOME:
+    %td{:colspan => 3}= @person.name
+  %tr
+    %td ESTADO CIVIL:
+    %td= @person.estado_civil
+    %td DATA DE NASCIMENTO:
+    %td= l(@person.date_birth, :format => :long) if @person.date_birth
+  %tr
+    %td CPF:
+    %td= @person.cpf
+    %td RG:
+    %td= @person.rg
+  %tr
+    %td ENDEREÇO:
+    %td{:colspan => 3}= @person.endereco
+  %tr
+    %td BAIRRO:
+    %td= @person.bairro
+    %td CIDADE:
+    %td= @person.cidade
+  %tr
+    %td ESTADO:
+    %td= @person.uf
+    %td CEP:
+    %td= @person.cep
+  %tr
+    %td FONE FIXO:
+    %td= @person.telefone_casa
+    %td CELULAR:
+    %td= @person.telefone_celular
+  %tr
+    %td EMAIL:
+    %td{:colspan => 3}= @person.email
+    
+%h4 CONTRATADA:
+%p
+  FACULDADE ENTRE RIOS DO PIAUÍ – FAERPI, cuja a mantenedora é a SOCIEDADE BENEFICENTE PADRE VALE, inscrita no CNPJ: 04.496.749/0001-22, entidade de ensino, sem fins lucrativos, com sede na Rua São Pedro, Nº: 880, CEP: 64046-480, Bairro: Centro, Teresina/PI, Telefone: (86)3232-5316 Fax: (86)3232-5316, E-mail: entrerios.faerpi@hotmail.com, credenciada pela Portaria do Ministério da Educação de Nº 4.407 de 29/12/2004 e publicada em 31/12/2004; em convênio com a SENTIDO ÚNICO CURSOS EMPRESARIAIS E JURÍDICOS LTDA, inscrita no CNPJ: 05.210.371.0001/11, com sede na Av. Dr. José Martins Rodrigues, 65 B Bairro Edson Queiroz, Fortaleza – CE.
+  
+%p
+  CLÁUSULA 1ª - O presente Contrato de Prestação de Serviços deste Curso de
+  = @course.name
+  é celebrado sob a égide da Constituição Federal art. 5º, inciso I; art. 163, parágrafo 4º, ART. 206, inciso II e III e art. 209, Incisos I e II. Rege-se também pela Legislação Ordinária aplicável à espécie, dentro do disposto na Resolução CNE/CES nº 1, de 8 de junho de 2007.
+  
+%p
+  CLÁUSULA 2ª - Acata o(a) CONTRATANTE, a proposta do Curso de 
+  = @course.name
+  oferecido pela CONTRATADA e as normas contidas em seu Regimento Interno, cujas determinações integram o presente instrumento para aplicação subsidiária e em casos omissos, bem como a legislação supletivamente aplicável à matéria, desde que não conflite com o Regimento Interno.
+  
+%p
+  CLÁUSULA 3ª - O objeto do presente Contrato consiste na Prestação de Serviços deste Curso de
+  = @course.name
+  , o qual possui Carga Horária de
+  = @curriculum.mandatory_workload
+  h/aula.
+  
+%p
+  PARÁGRAFO ÚNICO – O candidato tem como pré-requisito para o ingresso neste curso de Curso de
+  = @course.name
+  , a comprovação através de documento de formação de nível superior reconhecido pelo MEC. Salvo aqueles que estiverem cursando o último ano da graduação, ressaltando o fato de que o mesmo só irá receber sua diplomação 6 (SEIS) meses após a conclusão da graduação de nível superior, podendo o mesmo solicitar, temporariamente, uma declaração de curso de extensão acadêmica, ao término do curso.
+  
+%p
+  PARÁGRAFO 1º - Como serviço mencionado nesta cláusula, entende-se os obrigatoriamente direcionados para serem prestados coletivamente para toda turma, de acordo com a carga horária prevista e disposições contidas no Planejamento pedagógico, não incluídos os facultativos e os de cará ter individual ou de grupo.
+
+%p
+  PARÁGRAFO 2º - Não estão incluídos neste contrato os serviços especiais que por ventura sejam solicitados, tais como: reforço, dependência, reciclagem, 2ª chamada, 2ª via do certificado de conclusão, exames especiais e fornecimento de documentos em geral, os quais terão seus preços pré-fixados em tabela no setor de Protocolo, os opcionais e de uso facultativo para os alunos, bem como material didático de uso individual, que poderá ser objeto de ajuste à parte.  
+  
+%p
+  CLÁUSULA 4ª - É de inteira e exclusiva responsabilidade da CONTRATADA, nos termos da Legislação em vigor e do seu regimento Interno, a determinação dos princípios, diretrizes e as definições técnico-administrativas e pedagógicas, relativas à prestação de serviços educacionais, objeto deste Contrato, sem a ingerência do(a) CONTRATANTE.
+  
+%p
+  PARÁGRAFO ÚNICO – Os serviços serão prestados pela CONTRATADA em salas de aula e outros locais que possibilitem melhor aprendizagem dos conteúdos e aproveitamento das técnicas pedagógicas necessárias.
+  
+%p
+  CLAUSULA 5ª - Efetiva-se e configura-se formalmente a matrícula através do preenchimento correto e aposição de assinatura do (a) CONTRATANTE no formulário fornecido pela Faculdade, denominado “Requerimento de Matrícula” que será parte integrante deste Contrato, após devidamente convalidado pela CONTRATADA.
+  
+%p
+  PARÁGRAFO ÚNICO – Assume o(a) CONTRATANTE total responsabilidade pelas informações por ele registradas neste Contrato e no Requerimento de Matricula. Fica a CONTRATADA isenta de qualquer responsabilidade pelos eventuais danos resultantes do não cumprimento da Lei ou da falsidade das informações prestadas.
+  
+%p
+  CLÁSULA 6ª - Pelos serviços referidos nas Cláusulas 3ª e Parágrafo Único da Cláusula 4ª, o (a) CONTRATANTE pagará a matricula no valor de R$ 100,00 (cem reais) e
+  = @parcelas
+  = "(#{@parcelas_extenso})"
+  mensalidades fixas no valor de
+  = number_to_currency @mensalidade
+  = "(#{@mensalidade_extenso})"
+  cada, totalizando um valor de
+  = number_to_currency @valor_total
+  = "(#{@valor_total_extenso})."
+  
+%p
+  CLÁUSULA 7ª – O pagamento efetuado em cheque não compensado por qualquer motivo previsto em Resolução do Banco Central, será desconsiderado, incorrendo o(a) CONTRATANTE nas penalidades previstas para a inadimplência e sendo cancelada à matrícula tornando a mesma sem efeito.
+  
+%p
+  CLÁUSULA 8ª - O (a) CONTRATANTE deverá manter sob sua guarda todos os recibos de débitos pagos durante o curso e apresentá-los a CONTRATADA sempre que solicitado.
+  
+%p
+  CLÁUSULA 9ª - Os cheques não compensados por falta de provisão de fundos ou por qualquer outro motivo, só serão devolvidos pela CONTRATA após a quitação.
+  
+%p
+  CLÁUSULA 10ª - Este contrato tem valor de título executivo extrajudicial, exigível mediante execução forçada, na forma do artigo 585 – Inciso II, do Código de Processo Civil (Redação da Lei 8.953, de 13 de dezembro de 1994).
+  
+%p
+  CLÁUSULA 11ª - Caso o (a) CONTRATANTE e ou responsável legal, vier no decorrer do curso mudar seu endereço indicado no preâmbulo deste, ficará obrigado a apresentar seu novo endereço imediatamente, sob pena de em caso de inadimplência, o (a) CONTRATANTE arcar com todos os custos cartorários, inclusive publicação em Edital.
+  
+%p
+  CLÁUSULA 12ª - O presente contrato terá duração de 15 (quinze) meses e poderá ser rescindido nas seguintes hipóteses:
+  %ol
+    %li Pelo(a) CONTRATANTE – beneficiário(a), mediante pagamento de taxa e requerimento assinado, datado e protocolado, dentro do prazo previsto, na Secretaria deste Estabelecimento de Ensino Superior;
+    %li Pela CONTRATADA, por conduta incompatível do(a) aluno(a) com as normas de disciplina didático/escolar e/ou por inadimplência, nos termos da Legislação vigente;
+    %li Por entendimento entre as partes contratantes;
+    %li A Direção da Faculdade se reserva ao direito de não realizar o curso caso não seja alcançado o número mínimo de 30 alunos. Somente neste caso, e não fechando nenhuma turma das segundas e terceiras opções do candidato, haverá devolução da taxa de matrícula.
+    %li Não será permitido a(o) CONTRATANTE solicitar requerimento de Trancamento de Matrícula à CONTRATADA, através de fax, telefone, telegrama, e-mail, carta registrada ou comum.
+    
+%p
+  PARÁGRAFO PRIMEIRO – Havendo a rescisão deste Contrato, consoante o disposto no “Caput” desta cláusula, fica o(a) CONTRATANTE obrigado(a) a pagar o valor da parcela do mês em que ocorrer o evento, além de outros débitos existentes, corrigidos nos termos do PARÁGRAFO ÚNICO da cláusula 7ª deste instrumento.
+ 
+%p
+  CLÁUSULA 13ª - O(a) CONTRATANTE, que vier a desistir do Curso de 
+  = @course.name
+  , deverá fazê-lo por escrito no PROTOCOLO GERAL DA CONTRATADA, devendo estar quite com a mensalidade do mês em curso da desistência.
+  
+%p
+  PARÁGRAFO PRIMEIRO – Referido protocolo deve ser realizado com uma antecedência de 30 (trinta) dias da data que se pretende rescindir o contrato pela desistência da permanência no curso.
+  
+%p
+  PARÁGRAFO SEGUNDO – Os cheques que se vencerem antes dos 30 (trinta) dias aludido no prazo acima, serão descontados em favor da CONTRATADA, não cabendo qualquer devolução sobre os valores pagos até a data da efetiva rescisão do contrato.
+  
+%p
+  PARÁGRAFO TERCEIRO – A título de penalidade pela rescisão, além da comunicação no prazo de 30 (trinta) dias de antecedência, o CONTRATANTE perderá em favor da CONTRATADA o valor de 30% (trinta por cento) dos cheques vincendos, a título de ressarcimento dos investimentos feitos pelo curso para as matérias que ainda seriam ministradas.
+  
+%p
+  CLÁUSULA 14ª - As partes atribuem ao presente Contrato plena e eficaz executiva extrajudicial.
+  
+%p
+  PARÁGRAFO ÚNICO – Iniciada a discussão judicial, no todo ou em parte sobre os valores, condições e determinações constantes deste instrumento, o(a) CONTRATANTE pagará os valores devidamente acertados.
+  
+%p
+  CLÁSULA 15ª - Fica eleito o foro da Comarca de Fortaleza, Estado do Ceará, para dirimir eventuais dúvidas ou litígios decorrentes deste Instrumento Contratual.
+  
+%p
+  E, por estarem justos e acordados, firma o presente CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE
+  = @course.name
+  , em duas vias de igual teor e forma, na presença de duas testemunhas abaixo qualificadas, para que produza os efeitos legais, podendo o mesmo sofrer aditamentos para adequar-se as novas Legislações que regulamentam a matéria.
+  
+%br
+  
+%p.right
+  Fortaleza (CE), _____ de  __________________, de 2011.
+  
+%br
+%br
+%p.center
+  ____________________________________________________________
+  %br
+  CONTRATANTE
+  
+%br
+  
+%p.center
+  ____________________________________________________________
+  %br
+  CONTRATADA
+  
+%br
+  
+%p.center
+  ____________________________________________________________
+  %br
+  TESTEMUNHA
+  
+%br
+  
+%p.center
+  ____________________________________________________________
+  %br
+  TESTEMUNHA

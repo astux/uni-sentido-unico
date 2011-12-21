@@ -1,3 +1,4 @@
+#encoding: utf-8
 class PartnerInstitutionsController < ApplicationController
   def index
     @partner_institutions = PartnerInstitution.paginate :page => params[:page]
