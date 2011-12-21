@@ -1,0 +1,23 @@
+pt:
+  activerecord:
+    models:
+      partner_institution: &partner_institution "Instituição Conveniada"
+    attributes:
+      course:
+        partner_institution_id: *partner_institution
+      partner_institution:
+        name: "Nome"
+        phone: "Telefone"
+        email: "E-mail"
+        website: "Site"
+        address: "Endereço"
+        district: "Bairro"
+        zipcode: "CEP"
+        city: "Cidade"
+        state: "Estado"
+  
+  PartnerInstitutions: &partner_institutions "Instituições Conveniadas"
+  PartnerInstitutionsMenu: "Instit. Conveniadas"
+  
+  url:
+    partner_institutions: *partner_institutions

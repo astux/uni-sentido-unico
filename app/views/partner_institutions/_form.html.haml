@@ -1,0 +1,50 @@
+= form_for([:admin, @partner_institution]) do |f|
+  = f.error_messages
+  
+  .clearfix
+    = f.label :name
+    .input
+      = f.text_field :name, :class => 'span6'
+      
+  .clearfix
+    = f.label :email
+    .input
+      = f.text_field :email, :class => 'span6'
+      
+  .clearfix
+    = f.label :website
+    .input
+      = f.text_field :website
+      
+  .clearfix
+    = f.label :phone
+    .input
+      = f.text_field :phone, :class => 'span2'
+      
+  .clearfix
+    = f.label :address
+    .input
+      = f.text_field :address, :class => 'span9'
+      
+  .clearfix
+    = f.label :district
+    .input
+      = f.text_field :district
+      
+  .clearfix
+    = f.label :zipcode
+    .input
+      = f.text_field :zipcode, :class => 'span2'
+      
+  .clearfix
+    = f.label :city
+    .input
+      = f.text_field :city
+      
+  .clearfix
+    = f.label :state
+    .input
+      = f.text_field :state
+      
+  .actions
+    = f.submit nil, :class => 'btn primary'

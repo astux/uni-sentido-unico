@@ -1,0 +1,48 @@
+- content_for :title do
+  %h1= t 'Parameters'
+  
+= render :partial => 'admin/parameters/menu'
+
+%article.content
+  %header.page-header
+    %h2= t 'activerecord.models.partner_institution'
+    %ul#toolbar
+      %li= link_to (t 'Back'), {:action => 'index'}, :class => 'back'
+      %li= link_to (t 'Edit'), {:action => 'edit'}, :class => 'edit'
+      %li= button_to (t 'Delete'), {:action => :show}, :confirm => (t 'AreYouSure'), :method => :delete, :class => 'delete'
+  
+  %p
+    %strong="#{t 'activerecord.attributes.partner_institution.name'}: "
+    = @partner_institution.name
+    
+  %p
+    %strong="#{t 'activerecord.attributes.partner_institution.email'}: "
+    = @partner_institution.email
+    
+  %p
+    %strong="#{t 'activerecord.attributes.partner_institution.website'}: "
+    = @partner_institution.website
+    
+  %p
+    %strong="#{t 'activerecord.attributes.partner_institution.phone'}: "
+    = @partner_institution.phone
+    
+  %p
+    %strong="#{t 'activerecord.attributes.partner_institution.address'}: "
+    = @partner_institution.address
+    
+  %p
+    %strong="#{t 'activerecord.attributes.partner_institution.district'}: "
+    = @partner_institution.district
+    
+  %p
+    %strong="#{t 'activerecord.attributes.partner_institution.zipcode'}: "
+    = @partner_institution.zipcode
+    
+  %p
+    %strong="#{t 'activerecord.attributes.partner_institution.city'}: "
+    = @partner_institution.city
+    
+  %p
+    %strong="#{t 'activerecord.attributes.partner_institution.state'}: "
+    = @partner_institution.state

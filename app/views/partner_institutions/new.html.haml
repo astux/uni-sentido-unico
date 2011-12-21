@@ -1,0 +1,15 @@
+- content_for :title do
+  %h1= t 'Parameters'
+  
+= render :partial => 'admin/parameters/menu'
+
+%article.content
+  %header.page-header
+    %h2
+      = t 'New'
+      = t 'activerecord.models.partner_institution'
+    
+    %ul#toolbar
+      %li= link_to (t 'Back'), {:action => 'new'}, :class => 'new'
+      
+  = render 'form'

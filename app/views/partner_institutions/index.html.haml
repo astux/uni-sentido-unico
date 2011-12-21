@@ -1,0 +1,21 @@
+- content_for :title do
+  %h1= t 'Parameters'
+  
+= render :partial => 'admin/parameters/menu'
+
+%article.content
+  %header.page-header
+    %h2= t 'PartnerInstitutions'
+    %ul#toolbar
+      %li= link_to ((t 'New') + ' ' + (t 'activerecord.models.partner_institution')), {:action => 'new'}, :class => 'new'
+      
+  %table
+    %thead
+      %tr
+        %th= t 'activerecord.attributes.partner_institution.name'
+    %tbody
+      - for partner_institution in @partner_institutions
+        %tr
+          %td= link_to partner_institution.name, [:admin, partner_institution]
+          
+  = will_paginate @partner_institutions
