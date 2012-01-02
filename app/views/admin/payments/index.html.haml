@@ -1,0 +1,24 @@
+- content_for :title do
+  %h1= @course.name
+
+= render :partial => 'admin/courses/menu', :locals => { :course => @course }
+
+%article.content
+  %header.page-header
+    %h2= @curriculum_student.student.name + ' - Pagamentos'
+    %ul#toolbar
+      %li= link_to 'Voltar', admin_course_curriculum_student_path(@course, @curriculum_student), :class => 'back'
+      %li= link_to 'Novo Pagamento', new_admin_course_curriculum_student_payment_path, :class => 'new'
+
+    %table
+      %thead
+        %tr
+          %th Vencimento
+          %th Valor
+          %th Pagamento
+      %tbody
+        - @payments.each do |payment|
+          %tr
+            %td= link_to payment.due_date.strftime('%d/%m/%Y'), [:admin, @course, @curriculum_student, payment]
+            %td= payment.amount_formatted
+            %td Estático // Em aberto // Pago em "data"

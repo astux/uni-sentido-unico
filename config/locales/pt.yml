@@ -2,6 +2,7 @@ pt:
   activerecord:
     models:
       partner_institution: &partner_institution "Instituição Conveniada"
+      payment: "Pagamento"
     attributes:
       course:
         partner_institution_id: *partner_institution
@@ -21,3 +22,4 @@ pt:
   
   url:
     partner_institutions: *partner_institutions
+    payments: "Pagamentos"

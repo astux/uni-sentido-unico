@@ -22,5 +22,13 @@ class UniSentidoUnicoInstall < ActiveRecord::Migration
      end
      
      add_column :courses, :course_contract_id, :integer
+
+     create_table :payments do |t|
+       t.date :due_date
+       t.decimal :amount
+       t.references :curriculum_student
+
+       t.timestamps
+     end
   end
 end

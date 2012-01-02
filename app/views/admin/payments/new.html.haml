@@ -1,0 +1,11 @@
+- content_for :title do
+  %h1= @course.name
+
+= render :partial => 'admin/courses/menu', :locals => { :course => @course }
+
+%article.content
+  %header.page-header
+    %h2= @curriculum_student.student.name + ' - Novo Pagamento'
+    %ul#toolbar
+
+  = render 'form'

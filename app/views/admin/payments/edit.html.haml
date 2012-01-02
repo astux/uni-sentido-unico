@@ -1,0 +1,12 @@
+- content_for :title do
+  %h1= @course.name
+
+= render :partial => 'admin/courses/menu', :locals => { :course => @course }
+
+%article.content
+  %header.page-header
+    %h2= @curriculum_student.student.name + ' - Pagamento'
+    %ul#toolbar
+      %li= link_to 'Voltar', admin_course_curriculum_student_payments_path(@course, @curriculum_student), :class => 'back'
+
+  = render 'form'
