@@ -5,5 +5,7 @@ class UniSentidoUnicoUninstall < ActiveRecord::Migration
      
      drop_table :course_contracts
      remove_column :courses, :course_contract_id
+
+     drop_table :payments
   end
 end

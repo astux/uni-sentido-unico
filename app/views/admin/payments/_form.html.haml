@@ -1,0 +1,15 @@
+= form_for([:admin, @course, @curriculum_student, @payment]) do |f|
+  = f.error_messages
+
+  .clearfix
+    = f.label 'Vencimento', nil
+    .input
+      = f.date_select :due_date, {}, {:class => 'span2'}
+  .clearfix
+    = f.label 'Valor'
+    .input
+      = f.text_field :amount
+
+  = hidden_field_tag 'payment[curriculum_student_id]', @curriculum_student.id
+  .actions
+    = f.submit nil, :class => 'btn primary'

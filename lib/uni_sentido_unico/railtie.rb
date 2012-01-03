@@ -8,6 +8,11 @@ module UniSentidoUnico
     
     rake_tasks do
       load "tasks/uni_sentido_unico.rake"
+
+    config.to_prepare do
+      CurriculumStudent.class_eval do
+        has_many :payments
+      end
     end
   end
 end

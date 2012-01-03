@@ -1,0 +1,25 @@
+- content_for :title do
+  %h1= @course.name
+
+= render :partial => 'admin/courses/menu', :locals => { :course => @course }
+
+%article.content
+  %header.page-header
+    %h2= @curriculum_student.student.name + ' - Pagamento'
+    %ul#toolbar
+      %li= link_to 'Voltar', admin_course_curriculum_student_payments_path(@course, @curriculum_student), :class => 'back'
+      %li= link_to 'Editar', edit_admin_course_curriculum_student_payment_path(@course, @curriculum_student, @payment), :class => 'edit'
+      %li= link_to 'Emitir Boleto', admin_course_curriculum_student_payment_path(@course, @curriculum_student, @payment) + '/gerar_boleto', :class => 'show'
+      %li= button_to t ('Delete'), [:admin, @course, @curriculum_student, @payment], :confirm => ( t 'AreYouSure'), :method => :delete, :class => 'delete'
+
+  %p
+    %strong Vencimento
+    = @payment.due_date.strftime('%d/%m/%Y')
+
+  %p
+    %strong Valor
+    = @payment.amount_formatted
+
+  %p
+    %strong Confirmação de Pagamento
+    Estático // TODO // Em aberto // Pago em 20/05/2010

@@ -3,6 +3,7 @@ pt:
     models:
       partner_institution: &partner_institution "Instituição Conveniada"
       course_contract: &course_contract "Contrato"
+      payment: "Pagamento"
     attributes:
       course:
         partner_institution_id: *partner_institution
@@ -29,3 +30,4 @@ pt:
   url:
     course_contracts: *course_contracts
     partner_institutions: *partner_institutions
+    payments: "Pagamentos"
