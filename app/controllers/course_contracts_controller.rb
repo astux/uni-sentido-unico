@@ -48,6 +48,7 @@ class CourseContractsController < ApplicationController
     require 'brnumeros'
     
     @course_contract = CourseContract.find params[:id]
+    @date = Time.new
     
     if params[:curriculum_student_id]
       @curriculum_student = CurriculumStudent.find params[:curriculum_student_id]

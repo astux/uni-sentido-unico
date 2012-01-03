@@ -10,8 +10,7 @@
       %li= link_to (t 'Back'), {:action => 'index'}, :class => 'back'
       %li= link_to (t 'Edit'), {:action => 'edit'}, :class => 'edit'
       %li= link_to (t 'Preview'), {:action => 'preview'}, :class => 'show'
-      %li= button_to (t 'Delete'), {:action => :show}, :confirm => (t 'AreYouSure'), :method => :delete, :class => 'delete'
-  
+      
   %p
     %strong="#{t 'activerecord.attributes.course_contract.name'}: "
     = @course_contract.name

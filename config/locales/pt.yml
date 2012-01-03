@@ -2,9 +2,13 @@ pt:
   activerecord:
     models:
       partner_institution: &partner_institution "Instituição Conveniada"
+      course_contract: &course_contract "Contrato"
     attributes:
       course:
         partner_institution_id: *partner_institution
+      course_contract:
+        name: "Nome"
+        slug: "Slug"
       partner_institution:
         name: "Nome"
         phone: "Telefone"
@@ -16,8 +20,12 @@ pt:
         city: "Cidade"
         state: "Estado"
   
+  CourseContracts: &course_contracts "Contratos"
+  CourseContractsMenu: *course_contracts
   PartnerInstitutions: &partner_institutions "Instituições Conveniadas"
   PartnerInstitutionsMenu: "Instit. Conveniadas"
+  Preview: "Visualizar"
   
   url:
+    course_contracts: *course_contracts
     partner_institutions: *partner_institutions

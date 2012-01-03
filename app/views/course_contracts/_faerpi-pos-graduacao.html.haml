@@ -2,7 +2,7 @@
   %tr
     %td.center
       = image_tag 'faerpi.png', :width => 150
-      %h1 FACULDADE ENTRE RIOS DO PIAUI
+      %h1 FACULDADE ENTRE RIOS DO PIAUÍ
   %tr
     %td.center
       %h4
@@ -159,32 +159,30 @@
 %br
   
 %p.right
-  Fortaleza (CE), _____ de  __________________, de 2011.
+  Fortaleza (CE),
+  = "#{@date.day} de #{t('date.month_names')[@date.month]} de #{@date.year}."
   
 %br
 %br
-%p.center
-  ____________________________________________________________
-  %br
+
+%hr.signature
+%p.center.bold.signature
   CONTRATANTE
   
 %br
-  
-%p.center
-  ____________________________________________________________
-  %br
+
+%hr.signature
+%p.center.bold.signature
   CONTRATADA
   
 %br
-  
-%p.center
-  ____________________________________________________________
-  %br
+
+%hr.signature
+%p.center.bold.signature
   TESTEMUNHA
   
 %br
-  
-%p.center
-  ____________________________________________________________
-  %br
+
+%hr.signature
+%p.center.bold.signature
   TESTEMUNHA
