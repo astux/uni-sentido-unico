@@ -49,7 +49,7 @@ class Admin::PaymentsController < ApplicationController
     @payment = Payment.find(params[:id])
     @payment.destroy
 
-    respond_with(:admin, @course, @curriculum_student)
+    respond_with(:admin, @course, @curriculum_student, @payment)
   end
 
   def gerar_boleto
