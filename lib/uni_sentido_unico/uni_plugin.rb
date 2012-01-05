@@ -11,5 +11,9 @@ module UniSentidoUnico
     def curriculumStudentMenuPartialUrls
       return 'uni_sentido_unico/curriculum_student_menu'
     end
+    
+    def name
+      return 'uni_sentido_unico'
+    end
   end
 end

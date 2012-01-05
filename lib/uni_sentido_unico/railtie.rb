@@ -10,6 +10,10 @@ module UniSentidoUnico
       load "tasks/uni_sentido_unico.rake"
     end
 
+    initializer "UniSentidoUnico.asset_pipeline" do |app|
+      app.config.assets.precompile << 'uni_sentido_unico/uni_sentido_unico.css'
+    end
+
     config.to_prepare do
       CurriculumStudent.class_eval do
         has_many :payments
