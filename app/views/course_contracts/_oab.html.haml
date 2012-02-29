@@ -1,0 +1,258 @@
+%p.center
+  = image_tag 'sentido_unico.png'
+
+%h1.center
+  CONTRATO DE PRESTAÇÃO DE SERVIÇOS EDUCACIONAIS DE CURSOS LIVRES
+
+%table.bordered.fullsize.bold
+  %tr
+    %th.center{:colspan => 4} DADOS DO CONTRATANTE
+  %tr
+    %td NOME:
+    %td{:colspan => 3}= @person.name
+  %tr
+    %td ESTADO CIVIL:
+    %td= @person.estado_civil
+    %td DATA DE NASCIMENTO:
+    %td= l(@person.date_birth, :format => :long) if @person.date_birth
+  %tr
+    %td CPF:
+    %td= @person.cpf
+    %td RG:
+    %td= @person.rg
+  %tr
+    %td ENDEREÇO:
+    %td{:colspan => 3}= @person.endereco
+  %tr
+    %td BAIRRO:
+    %td= @person.bairro
+    %td CIDADE:
+    %td= @person.cidade
+  %tr
+    %td ESTADO:
+    %td= @person.uf
+    %td CEP:
+    %td= @person.cep
+  %tr
+    %td FONE FIXO:
+    %td= @person.telefone_casa
+    %td CELULAR:
+    %td= @person.telefone_celular
+  %tr
+    %td EMAIL:
+    %td{:colspan => 3}= @person.email
+    
+%br
+%br
+    
+%table.bordered.fullsize
+  %tr
+    %th.center DADOS DA CONTRATADA
+  %tr
+    %td
+      %strong Sentido Único Cursos Empresariais e Jurídicos Ltda,
+      pessoa jurídica de direito privado, com sede na rua Dr. Jose Martins Rodrigues, 65B, Bairro Edson Queiroz, na cidade de Fortaleza, estado do Ceará, inscrita CNPJ sob o nº 05.210.371/0001-11, Inscrita no Municipal de Fortaleza sob o nº 176.332-6, empresa promotora de cursos livres nas áreas Jurídica e Empresarial, neste ato representada por seu Diretor Comercial, Sr. Gerard Teixeira, casado, com endereço comercial na rua Dr. José Martins Rodrigues, 65 B, Bairro Edson Queiroz, na cidade de Fortaleza, estado do Ceará.
+      
+%p
+  As partes acima resolvem de comum acordo, e na melhor forma de direito, celebrar o presente
+  %strong Contrato de Prestação de Serviços Educacionais de Cursos Livres,
+  mediante cláusulas e condições a seguir:
+  
+%h4 CLÁUSULA PRIMEIRA – DO OBJETO.
+%p
+  %strong 1.1 -
+  O presente contrato tem por objeto a contratação de prestação de serviços educacionais conforme os dados a seguir:
+  
+%table.bordered.fullsize
+  %tr
+    %th Curso:
+    %td{:colspan => 3}= @course.name
+  %tr
+    %th Data prevista para iniciar:
+    %td
+    %th Carga horária total:
+    %td
+      = @curriculum.mandatory_workload
+      h/aula
+  %tr
+    %th Horário:
+    %td{:colspan => 3}
+  %tr
+    %th Local de Realização:
+    %td Sede da contratada
+    %th Turno:
+    %td
+  %tr
+    %th Conteudo Programatico:
+    %td{:colspan => 3} Descrito no anexo 01, que se integra a este contrato para todos os fins de direito, fazendo um todo indivisível.
+  
+%h4 CLÁUSULA SEGUNDA – DAS OBRIGAÇÕES DA CONTRATADA.
+%p
+  %strong 2.1 -
+  Executar as aulas referentes ao conteúdo programático constantes do anexo 01, nos horários e dias pactuados, cumprindo no prazo previsto a carga horária estipulada para cada matéria. Utilizar seu quadro de profissionais, professores e pessoal administrativo, para desenvolver as atividades necessárias à perfeita realização do serviço. 
+
+%p
+  %strong 2.2 -
+  A contratada se compromete a dar a contratante, oportunidade de participar, na condição de gratuidade, de outro curso preparatório para o exame da ordem, caso a mesma não consiga se aprovada no certamente posterior ao período de realização do curso, desde que participe de 90%(noventa por cento) das aulas, comprovando através da lista frequência, que será assinada no final de cada aula.
+  
+%h4 CLÁUSULA TERCEIRA – DAS OBRIGAÇÕES DO (A) CONTRATANTE.
+%p
+  %strong 3.1 -
+  Efetuar o pagamento do valor previsto na Cláusula Quarta, para o fiel cumprimento do objeto previsto na Cláusula Primeira deste contrato, nos prazos e condições estabelecidos na Cláusula Quinta, sob pena do não cumprimento implicar cobrança judicial e/ou extrajudicial.
+  
+%p
+  %strong 3.2 -
+  Prestar informações relacionadas ao desenvolvimento do objeto do presente instrumento, quando solicitadas pela CONTRATADA.
+  
+%p
+  %strong 3.3 -
+  Seguir as normas da instituição, objeto deste instrumento, seguindo fielmente o programa de trabalho proposto pela Coordenação.
+  
+%p
+  %strong 3.4 -
+  Freqüentar 90%(noventa por cento) das aulas para ter o seu direito assegurado de participar do curso novamente, sem ônus, caso não consiga ser aprovado no certame seguinte. 
+  
+%p
+  %strong 3.5 -
+  O contratante se compromete a assinar a lista de freqüência diária.
+  
+%h4 CLÁUSULA QUARTA – DO INVESTIMENTO.
+%p
+  %strong 4.1 -
+  Pelos serviços, objeto do presente instrumento, o (a)
+  %strong CONTRATANTE
+  pagará à
+  %strong CONTRATADA
+  o valor global de
+  = "#{number_to_currency(@valor_total)} (#{@valor_total_extenso}),"
+  conforme o disposto na Cláusula Quinta.
+
+%h4 CLÁUSULA QUINTA – DO PAGAMENTO.
+%p
+  %strong 5.1 -
+  O pagamento do valor ajustado na Cláusula Quarta deverá ser efetuado no ato da matrícula, na sede da CONTRATADA, localizado na Rua Dr. Jose Martins Rodrigues, 65 B, Bairro Edson Queiroz, na cidade de Fortaleza, estado do Ceará, através de cheques pré-datados, de acordo com as datas e valores a seguir:
+  
+%table
+  %thead
+    %tr
+      %th Nº DO TÍTULO
+      %th VALOR
+      %th VENCIMENTO
+      %th BANCO
+      %th AGENCIA
+  %tbody
+    %tr
+      %td
+      %td
+      %td
+      %td
+
+%p
+  %strong 5.2 -
+  A devolução de cheques, por qualquer motivo, ensejará cobrança de multa de 2% (dois por cento) ao mês, acrescidos dos juros moratórios e taxas bancárias, conforme legislação vigente, além das medidas judiciais e extrajudiciais cabíveis.
+  
+%p
+  %strong 5.3 -
+  O contratante fica ciente que pelo fato do pagamento ser efetuado em cheque, a contratada negociará esses títulos com instituições financeiras ou de fomento mercantil, tornando impraticável a devolução dos mesmos, independente de qualquer situação, tendo em vista a natureza jurídica do título, consoante disposição da lei vigente.
+  
+%h4 CLÁUSULA SEXTA – DA VIGÊNCIA DO CONTRATO.
+%p
+  %strong 6.1 -
+  O presente contrato vigerá pelo prazo correspondente à realização do curso, podendo ter suas condições mantidas ou alteradas, com exceção do objeto, a critério das partes, através de aditivos.
+  
+%h4 CLÁUSULA SÉTIMA – DA RESCISÃO.
+%p
+  %strong 7.1 -
+  O presente contrato poderá ser rescindindo de pleno direito, no caso de inadimplemento de qualquer de suas cláusulas ou condições, ressalvando os compromissos já assumidos e que não possam ser cancelados sem ônus.
+  
+%p
+  %strong Parágrafo Único:
+  Em caso de desistência no decorrer do curso, manifestada após a matrícula, o (a) CONTRATANTE fica ciente que receberá um crédito do valor relativo ao período vincendo, independente da exigibilidade do período vencido do valor total acordado na Cláusula Quarta, em virtude de compromissos assumidos pela CONTRATADA perante pessoal administrativo, quadro docente, terceiros e despesas com material de apoio e estrutura.
+  
+%h4 CLÁUSULA OITAVA – DA ADMINISTRAÇAO E COORDENAÇÃO.
+%p
+  %strong 8.1 -
+  A Administração e Coordenação dos serviços, objeto deste instrumento, ficarão sob a responsabilidade exclusiva da
+  %strong CONTRATADA.
+  
+%h4 CLÁUSULA NOVA – DOS CASOS OMISSOS.
+%p
+  %strong 9.1 -
+  Os casos omissos serão solucionados mediante entendimento entre as partes.
+  
+%h4 CLÁUSULA DÉCIMA – DO FORO.
+%p
+  %strong 10.1 -
+  Fica eleito o foro da comarca de Fortaleza, estado do Ceará, para dirimir todas e quaisquer controvérsias oriundas da execução do presente contrato, com exclusão de qualquer outro por mais privilegiado que seja.
+  
+%p
+  Assim, por estarem contratados firmam o presente instrumento em 02 (duas) vias de igual teor e forma, para efeitos legais na presença das testemunhas que também subscrevem.
+  
+%br
+%br
+
+%p.right
+  Fortaleza (CE),
+  = "#{@date.day} de #{t('date.month_names')[@date.month]} de #{@date.year}."
+
+%br
+%br
+%br
+
+%hr.signature
+%p.center.bold.signature
+  Sentido Único Cursos Empresariais e Jurídicos LTDA
+  %br
+  CONTRATADA
+  
+%br
+
+%hr.signature
+%p.center.bold.signature
+  CONTRANTANTE
+  
+%br
+  
+%hr.signature
+%p.center.bold.signature
+  TESTEMUNHA
+  
+%br
+  
+%hr.signature
+%p.center.bold.signature
+  TESTEMUNHA
+
+%br
+
+%h1.center.pagebreak ANEXO Nº 01 AO CONTRATO DE PRESTAÇÃO DE SERVIÇOS EDUCACIONAIS
+ 
+%p
+  %strong CURSO:
+  = @course.name
+  
+%p
+  %strong DATA DE INÍCIO:
+  
+%p
+  %strong CARGA HORÁRIA TOTAL:
+  = @curriculum.mandatory_workload
+  h/aula
+  
+%table.fullsize
+  %thead
+    %tr
+      %th DISCIPLINA:
+      %th CARGA HORÁRIA:
+  %tbody
+    - for curriculum_discipline in @curriculum.curriculum_disciplines
+      %tr
+        %td= curriculum_discipline.name
+        %td= curriculum_discipline.discipline.workload
+
+%br
+%br
+
+%p
+  Fortaleza (CE),
+  = "#{@date.day} de #{t('date.month_names')[@date.month]} de #{@date.year}."
